@@ -25,3 +25,4 @@ class TestData:
 
     HOME_URL = 'https://qa-scooter.praktikum-services.ru/'  # хоум страница
     DZEN_URL = 'https://dzen.ru/?yredirect=true&is_autologin_ya=true'  # страница редиректа на дзен
+    BASE_URL = 'https://qa-scooter.praktikum-services.ru/' #главная страница портала

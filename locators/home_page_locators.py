@@ -26,12 +26,8 @@ class HomePageLocators:
         8: [By.XPATH, "//div[@id='accordion__panel-7']"]
     }
 
-    LOGO1 = By.XPATH, "//a[contains(@class, 'Header_LogoYandex__3TSOI')]"  # лого хоум страницы "Яндекс"
-    LOGO2 = By.XPATH, "//a[contains(@class, 'Header_LogoScooter__3lsAR')]"  # лого хоум страницы "Самокат"
     FAQ_SECTION = By.XPATH, "//div[text()='Вопросы о важном']"  # секция страницы с вопросами
 
     # кнопки заказов в хедере и на хоум странице
     HEADER_ORDER_BUTTON = By.XPATH, "//div[@class = 'Header_Nav__AGCXC']/button[@class='Button_Button__ra12g']"
     ORDER_BUTTON = By.XPATH, "//div[contains(@class, 'Home_FinishButton')]/button"
-
-    COOKIE_BUTTON = By.XPATH, "//button[@id='rcc-confirm-button']"

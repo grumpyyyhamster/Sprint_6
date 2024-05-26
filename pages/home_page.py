@@ -29,3 +29,5 @@ class HomePage(BasePage):
     @allure.step('Посмотреть какой текст отображается в необходимом объекте ("Вопросы о важном")')
     def item_text_faq(self, value):
         return self.item_text(HomePageLocators.ANSWERS[value])
+
+

@@ -26,3 +26,12 @@ class BasePage:
     @allure.step('Посмотреть какой текст отображается в необходимом объекте')
     def item_text(self, locator):
         return self.driver.find_element(*locator).text
+
+    @allure.step('Переход на новую вкладку')
+    def switch_to_new_tab(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])
+
+    @allure.step('Получение URL')
+    def get_url(self):
+        return self.driver.current_url
+

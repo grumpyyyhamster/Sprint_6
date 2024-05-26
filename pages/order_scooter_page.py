@@ -21,7 +21,7 @@ class OrderScooterPage(BasePage):
         self.waiting_for_item_to_be_visible(OrderScooterPageLocators.PHONE)
         self.click_on_item(OrderScooterPageLocators.PHONE)
         self.set_value_for_input(OrderScooterPageLocators.PHONE, reg_data_values[4])
-        self.click_on_item(HomePageLocators.COOKIE_BUTTON)
+        self.click_on_item(OrderScooterPageLocators.COOKIE_BUTTON)
         self.scroll_to_item(OrderScooterPageLocators.NEXT_BUTTON)
         self.click_on_item(OrderScooterPageLocators.NEXT_BUTTON)
 
@@ -47,22 +47,22 @@ class OrderScooterPage(BasePage):
         self.waiting_for_item_to_be_visible(OrderScooterPageLocators.ORDER_CONFIRMED_BUTTON)
         return self.item_text(OrderScooterPageLocators.ORDER_CONFIRMED_BUTTON)
 
-    @allure.step('Кликнуть на лого "Самокат"')
-    def click_on_scooter_logo(self):
-        self.click_on_item(HomePageLocators.LOGO2)
-
-    @allure.step('Кликнуть на лого "Яндекс"')
-    def click_on_yandex_logo(self):
-        self.click_on_item(HomePageLocators.LOGO1)
-
     @allure.step('Ожидание отображения лого Дзен на странице')
     def waiting_page_dzen_logo(self):
         self.waiting_for_item_to_be_visible(OrderScooterPageLocators.DZEN_LOGO)
 
-    @allure.step('Переход на новую вкладку')
-    def switch_to_new_tab(self):
-        self.driver.switch_to.window(self.driver.window_handles[1])
+    @allure.step('Переход на новую вкладку Дзен')
+    def switch_to_new_tab_dzen(self):
+        self.switch_to_new_tab()
 
-    @allure.step('Получение URL')
-    def get_url(self):
-        return self.driver.current_url
+    @allure.step('Получение URL Дзен')
+    def get_url_dzen(self):
+        self.get_url()
+
+    @allure.step('Кликнуть на лого "Самокат"')
+    def click_on_scooter_logo(self):
+        self.click_on_item(OrderScooterPageLocators.LOGO2)
+
+    @allure.step('Кликнуть на лого "Яндекс"')
+    def click_on_yandex_logo(self):
+        self.click_on_item(OrderScooterPageLocators.LOGO1)

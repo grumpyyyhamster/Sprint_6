@@ -36,3 +36,8 @@ class OrderScooterPageLocators:
     ORDER_CONFIRMED_BUTTON = By.XPATH, "//button[text()='Посмотреть статус']"  # Кнопка "Посмотреть статус"
 
     DZEN_LOGO = By.XPATH, "//div[contains(@class, 'desktop-base-header__logoContainer-3l desktop-base-header__isMorda-mX')]"  # лого Яндекс.Дзен
+
+    LOGO1 = By.XPATH, "//a[contains(@class, 'Header_LogoYandex__3TSOI')]"  # лого хоум страницы "Яндекс"
+    LOGO2 = By.XPATH, "//a[contains(@class, 'Header_LogoScooter__3lsAR')]"  # лого хоум страницы "Самокат"
+
+    COOKIE_BUTTON = By.XPATH, "//button[@id='rcc-confirm-button']" #кнопка куки
